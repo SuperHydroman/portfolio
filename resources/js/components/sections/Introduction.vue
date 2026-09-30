@@ -15,6 +15,7 @@ const technologies = [
     'WordPress',
     'Laravel',
     'Statamic',
+    'C#',
     'MySQL',
     'Docker',
     'Linux',
