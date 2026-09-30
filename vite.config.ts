@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import vue from '@vitejs/plugin-vue';
 import laravel from 'laravel-vite-plugin';
 import { bunny } from 'laravel-vite-plugin/fonts';
+import path from 'node:path';
 import { defineConfig, lazyPlugins } from 'vite-plus';
 
 export default defineConfig({
@@ -31,6 +32,11 @@ export default defineConfig({
             formVariants: true,
         }),
     ]),
+    resolve: {
+        alias: {
+            '@images': path.resolve(__dirname, 'resources/images'),
+        },
+    },
     server: {
         watch: {
             ignored: [
