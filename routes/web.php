@@ -2,4 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::inertia('/', 'ComingSoon')->name('home');
+if (config('app.env') === 'production')
+    Route::inertia('/', 'ComingSoon')->name('home');
+else Route::inertia('/', 'Home')->name('home');
+

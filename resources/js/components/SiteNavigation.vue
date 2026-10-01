@@ -25,8 +25,11 @@ const links = [
 
                 <!-- Theme switcher -->
                 <span>
-                    <button class="w-8 h-8 bg-transparent border border-muted rounded-full">
-                        🌙
+                    <button class="w-8 h-8 bg-transparent border border-muted rounded-full cursor-pointer hover:bg-secondary">
+                        <i class="fa-solid fa-moon"></i>
+
+                        <!-- Sun -->
+<!--                        <i class="fa-solid fa-sun"></i>-->
                     </button>
                 </span>
             </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { truncate } from "@/lib/utils";
+import Button from "@/components/ui/Button.vue";
 
 type Project = {
     name: string;
@@ -13,7 +13,7 @@ const projects: Project[] = [
         name: 'Platformer Game',
         description: 'A platformer project built with lua.',
         url: 'https://github.com/SuperHydroMan/Platformer-Game',
-        technologies: ['Lua']
+        technologies: ['LUA']
     },
     {
         name: 'JavaScript Fighter',
@@ -25,37 +25,54 @@ const projects: Project[] = [
         name: 'TopDown Shooter',
         description: 'A top-down shooter project built with Lua.',
         url: 'https://github.com/SuperHydroMan/TopDown-Shooter-Game',
-        technologies: ['Lua'],
+        technologies: ['LUA'],
+    },
+    {
+        name: 'RPGBattle',
+        description: 'A console-based RPG battle game built with C#.',
+        url: 'https://github.com/SuperHydroMan/RPGBattle',
+        technologies: ['C#'],
     }
 ]
 </script>
 
 <template>
-    <section id="projects" class="py-16">
-        <h2 class="text-3xl font-semibold">Projects</h2>
+    <div class="container py-24">
+        <section id="home" class="grid grid-cols-12 gap-8">
+            <div class="flex flex-col gap-y-4 col-span-12">
+                <span class="font-mono uppercase text-accent">
+                    // SELECTED WORK
+                </span>
 
-        <div class="mt-8 grid gap-6 md:grid-cols-3">
-            <article v-for="project in projects" :key="project.url" class="flex h-full flex-col rounded-lg border border-slate-800 p-6 max-h-64">
-                <h3 class="text-xl font-semibold">
-                    {{ project.name }}
-                </h3>
+                <h1 class="text-5xl font-bold leading-12">
+                    Projects I've built
+                </h1>
 
-                <p class="mt-3 text-slate-400">
-                    {{ truncate(project.description) }}
+                <p class="text-xl text-body tracking-wide">
+                    A few things I've enjoyed working on.
                 </p>
+            </div>
+            <div class="col-span-12 grid grid-cols-4 gap-4">
+                <article v-for="project in projects" :key="project.url" class="flex flex-col rounded-lg border border-outline bg-secondary p-6 gap-4">
+                    <div>
+                        <img src="https://placehold.co/300x200/EEE/31343C" alt="Terminal introduction picture" class="w-full h-auto">
+                    </div>
 
-                <div class="mt-auto pt-6">
-                    <ul class="flex flex-wrap gap-2">
-                        <li v-for="technology in project.technologies" :key="technology" class="rounded bg-slate-800 px-2 py-1 text-sm">
+                    <span class="text-xl font-bold">{{ project.name }}</span>
+
+                    <span class="text-body">{{ project.description }}</span>
+
+                    <div class="flex items-center justify-between">
+                        <span v-for="technology in project.technologies" :key="technology" class="rounded bg-slate-800 px-2 py-1 text-sm">
                             {{ technology }}
-                        </li>
-                    </ul>
+                        </span>
 
-                    <a :href="project.url" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block text-cyan-400">
-                        View on GitHub ↗
-                    </a>
-                </div>
-            </article>
-        </div>
-    </section>
+                        <Button href="{{ project.url }}" variant="ghost">
+                            View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </Button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
 </template>

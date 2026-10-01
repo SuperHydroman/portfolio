@@ -13,6 +13,7 @@ import Introduction from "@/components/sections/Introduction.vue";
 
         <div class="relative isolate overflow-hidden">
             <Introduction />
+            <Projects />
         </div>
     </div>
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 type Props = {
     href?: string;
-    variant?: 'primary' | 'secondary';
+    variant?: 'primary' | 'secondary' | 'ghost';
     type?: 'button' | 'submit' | 'reset';
 }
 
@@ -11,8 +11,9 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const variants = {
-    primary: 'border-accent bg-accent text-primary hover:bg-accent-hover hover:border-accent-hover',
-    secondary: 'border-outline bg-transparent text-heading hover:border-accent hover:text-accent'
+    primary: 'border-accent bg-accent text-primary hover:bg-accent-hover hover:border-accent-hover px-5 py-3',
+    secondary: 'border-outline bg-transparent text-heading hover:border-accent hover:text-accent px-5 py-3',
+    ghost: 'bg-transparent border-0 text-accent hover:text-accent-hover hover:underline'
 }
 </script>
 
@@ -22,7 +23,7 @@ const variants = {
         :href="props.href"
         :type="props.type"
         :class="variants[props.variant]"
-        class="inline-flex items-center justify-center gap-2 rounded-md border px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus:outline-accent"
+        class="inline-flex items-center justify-center gap-2 rounded-md border text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus:outline-accent"
     >
         <slot />
     </component>

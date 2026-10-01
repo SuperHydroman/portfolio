@@ -11,6 +11,7 @@
         @fonts
 
         @vite(['resources/css/app.css', 'resources/js/app.ts', "resources/js/pages/{$page['component']}.vue"])
+        <script src="https://kit.fontawesome.com/a05c9ef73c.js" crossorigin="anonymous"></script>
         <x-inertia::head>
             <title>{{ config('app.name', 'Laravel') }}</title>
         </x-inertia::head>

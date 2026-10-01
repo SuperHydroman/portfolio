@@ -5,7 +5,6 @@ import Pill from "@/components/ui/Pill.vue";
 const githubUrl = 'https://github.com/SuperHydroMan';
 
 const technologies = [
-
     'HTML',
     'JavaScript',
     'TypeScript',
@@ -28,8 +27,8 @@ const randomizedTechnologies = [...technologies].sort(
 
 <template>
     <header class="container py-24">
-        <section id="home" class="grid grid-cols-12 gap-x-24">
-            <div class="flex flex-col gap-y-6 col-span-5">
+        <section id="home" class="grid grid-cols-12">
+            <div class="flex flex-col gap-6 col-span-5">
                 <span class="font-mono uppercase text-accent">
                     // WELCOME TO MY PROFILE
                 </span>
@@ -62,55 +61,10 @@ const randomizedTechnologies = [...technologies].sort(
                         <Pill>{{ technology }}</Pill>
                     </li>
                 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--                <p class="mt-4 text-lg text-cyan-400">-->
-<!--                    Full-Stack Developer & DevOps Engineer-->
-<!--                </p>-->
-<!--                <p class="mt-6 max-w-xl leading-relaxed text-slate-400">-->
-<!--                    I enjoy building software and understanding the systems behind it.-->
-<!--                </p>-->
-
-<!--                <div class="mt-8 flex gap-4">-->
-<!--                    <a href="#projects" class="rounded-md bg-cyan-400 px-5 py-3 font-medium text-slate-950">-->
-<!--                        View my work-->
-<!--                    </a>-->
-
-<!--                    <a :href="githubUrl" target="_blank" rel="noopener noreferrer" class="rounded-md border border-slate-700 px-5 py-3">-->
-<!--                        GitHub-->
-<!--                    </a>-->
-<!--                </div>-->
             </div>
 
-            <div class="col-span-7">
-                <img src="https://placehold.co/600x400/EEE/31343C" alt="Terminal introduction picture" class="w-full h-auto">
+            <div class="col-span-6 col-start-7">
+                <img src="https://placehold.co/600x450/EEE/31343C" alt="Terminal introduction picture" class="w-full h-auto">
             </div>
         </section>
     </header>
