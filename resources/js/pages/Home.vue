@@ -3,6 +3,7 @@ import { Head } from '@inertiajs/vue3';
 import SiteNavigation from "@/components/SiteNavigation.vue";
 import Projects from '@/components/sections/Projects.vue';
 import Introduction from "@/components/sections/Introduction.vue";
+import AboutMe from "@/components/sections/AboutMe.vue";
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import Introduction from "@/components/sections/Introduction.vue";
         <div class="relative isolate overflow-hidden">
             <Introduction />
             <Projects />
+            <AboutMe />
         </div>
     </div>
 </template>

@@ -26,10 +26,10 @@ const randomizedTechnologies = [...technologies].sort(
 </script>
 
 <template>
-    <header class="container py-24">
-        <section id="home" class="grid grid-cols-12">
+    <section id="home" class="py-28">
+        <header class="container grid grid-cols-12 gap-8">
             <div class="flex flex-col gap-6 col-span-5">
-                <span class="font-mono uppercase text-accent">
+                <span class="font-mono uppercase text-accent font-medium">
                     // WELCOME TO MY PROFILE
                 </span>
 
@@ -64,8 +64,8 @@ const randomizedTechnologies = [...technologies].sort(
             </div>
 
             <div class="col-span-6 col-start-7">
-                <img src="https://placehold.co/600x450/EEE/31343C" alt="Terminal introduction picture" class="w-full h-auto">
+                <img src="https://placehold.co/600x400/EEE/31343C" alt="Terminal introduction picture" class="w-full h-auto">
             </div>
-        </section>
-    </header>
+        </header>
+    </section>
 </template>

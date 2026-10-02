@@ -36,7 +36,7 @@ function slugify(str: string) {
         </span>
 
         <div v-if="labels || url" class="flex items-center justify-between">
-            <span v-if="labels" v-for="label in labels" :key="label" class="rounded bg-slate-800 px-2 py-1 text-sm">
+            <span v-if="labels" v-for="label in labels" :key="label" class="rounded bg-tertiary px-2 py-1 text-sm">
                 {{ label }}
             </span>
 

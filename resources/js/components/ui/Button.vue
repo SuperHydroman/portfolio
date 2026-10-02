@@ -23,7 +23,7 @@ const variants = {
         :href="props.href"
         :type="props.type"
         :class="variants[props.variant]"
-        class="inline-flex items-center justify-center gap-2 rounded-md border text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus:outline-accent"
+        class="inline-flex items-center justify-center gap-2 rounded-md border text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus:outline-accent"
     >
         <slot />
     </component>

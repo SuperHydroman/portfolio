@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Button from "@/components/ui/Button.vue";
 import Card from "@/components/ui/Card.vue";
 
 type Project = {
@@ -38,16 +37,16 @@ const projects: Project[] = [
 </script>
 
 <template>
-    <div class="container py-24">
-        <section id="home" class="grid grid-cols-12 gap-8">
+    <section id="projects" class="py-28">
+        <div class="container grid grid-cols-12 gap-8">
             <div class="flex flex-col gap-y-4 col-span-12">
-                <span class="font-mono uppercase text-accent">
+                <span class="font-mono uppercase text-accent font-medium">
                     // SELECTED WORK
                 </span>
 
-                <h1 class="text-5xl font-bold leading-12">
+                <h3 class="text-5xl font-bold leading-12">
                     Projects I've built
-                </h1>
+                </h3>
 
                 <p class="text-xl text-body tracking-wide">
                     A few things I've enjoyed working on.
@@ -60,6 +59,6 @@ const projects: Project[] = [
                     :url="project.url"
                     :labels="project.technologies" />
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </template>
