@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Button from "@/components/ui/Button.vue";
+import Card from "@/components/ui/Card.vue";
 
 type Project = {
     name: string;
@@ -53,25 +54,11 @@ const projects: Project[] = [
                 </p>
             </div>
             <div class="col-span-12 grid grid-cols-4 gap-4">
-                <article v-for="project in projects" :key="project.url" class="flex flex-col rounded-lg border border-outline bg-secondary p-6 gap-4">
-                    <div>
-                        <img src="https://placehold.co/300x200/EEE/31343C" alt="Terminal introduction picture" class="w-full h-auto">
-                    </div>
-
-                    <span class="text-xl font-bold">{{ project.name }}</span>
-
-                    <span class="text-body">{{ project.description }}</span>
-
-                    <div class="flex items-center justify-between">
-                        <span v-for="technology in project.technologies" :key="technology" class="rounded bg-slate-800 px-2 py-1 text-sm">
-                            {{ technology }}
-                        </span>
-
-                        <Button href="{{ project.url }}" variant="ghost">
-                            View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </Button>
-                    </div>
-                </article>
+                <Card v-for="project in projects"
+                    :title="project.name"
+                    :description="project.description"
+                    :url="project.url"
+                    :labels="project.technologies" />
             </div>
         </section>
     </div>
