@@ -36,3 +36,11 @@
 .nav {
     @apply py-4 flex justify-between;
 }
+
+input, textarea {
+    @apply border border-solid border-outline bg-primary rounded-md p-2;
+}
+
+button {
+    cursor: pointer;
+}

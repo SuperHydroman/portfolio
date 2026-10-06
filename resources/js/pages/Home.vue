@@ -4,6 +4,8 @@ import SiteNavigation from "@/components/SiteNavigation.vue";
 import Projects from '@/components/sections/Projects.vue';
 import Introduction from "@/components/sections/Introduction.vue";
 import AboutMe from "@/components/sections/AboutMe.vue";
+import Contact from "@/components/sections/Contact.vue";
+import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
@@ -12,10 +14,14 @@ import AboutMe from "@/components/sections/AboutMe.vue";
     <div class="min-h-screen bg-primary text-heading">
         <SiteNavigation />
 
-        <div class="relative isolate overflow-hidden">
+        <main>
             <Introduction />
+
             <Projects />
+
             <AboutMe />
-        </div>
+            <Contact />
+            <Footer />
+        </main>
     </div>
 </template>

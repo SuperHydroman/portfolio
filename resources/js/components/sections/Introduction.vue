@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Button from "@/components/ui/Button.vue";
 import Pill from "@/components/ui/Pill.vue";
+import HeaderCodeTerminal from "@/components/ui/HeaderCodeTerminal.vue";
+import SubHeader from "@/components/SubHeader.vue";
 
 const githubUrl = 'https://github.com/SuperHydroMan';
 
@@ -23,15 +25,19 @@ const technologies = [
 
 const randomizedTechnologies = [...technologies].sort(
     () => Math.random() - 0.5);
+
+const developmentSteps = [
+    { label: 'Code', icon: 'fa-code' },
+    { label: 'Build', icon: 'fa-cube' },
+    { label: 'Deploy', icon: 'fa-cloud' },
+];
 </script>
 
 <template>
     <section id="home" class="py-28">
         <header class="container grid grid-cols-12 gap-8">
             <div class="flex flex-col gap-6 col-span-5">
-                <span class="font-mono uppercase text-accent font-medium">
-                    // WELCOME TO MY PROFILE
-                </span>
+                <SubHeader text="WELCOME TO MY PROFILE"/>
 
                 <h1 class="text-6xl font-bold leading-12">
                     <span class="block">
@@ -52,7 +58,7 @@ const randomizedTechnologies = [...technologies].sort(
                 </p>
 
                 <div class="flex gap-x-4">
-                    <Button href="#projects">View my work -></Button>
+                    <Button href="#projects">View my work <i class="fa-solid fa-arrow-right"></i></Button>
                     <Button href="#contact" variant="secondary">Get in touch</Button>
                 </div>
 
@@ -64,7 +70,17 @@ const randomizedTechnologies = [...technologies].sort(
             </div>
 
             <div class="col-span-6 col-start-7">
-                <img src="https://placehold.co/600x400/EEE/31343C" alt="Terminal introduction picture" class="w-full h-auto">
+                <HeaderCodeTerminal />
+
+                <ol aria-label="Development workflow" class="relative z-10 mx-4 -mt-6 flex items-center justify-end gap-3">
+                    <li v-for="(step, index) in developmentSteps" :key="step.label" class="flex items-center gap-3">
+                        <div class="flex h-24 w-24 flex-col items-center justify-center gap-3 rounded-xl border border-accent/30 bg-primary shadow-lg">
+                            <i :class="['fa-solid', step.icon]" class="text-2xl text-accent" aria-hidden="true"></i>
+                            <span class="text-sm text-heading">{{ step.label }}</span>
+                        </div>
+                        <i v-if="index < developmentSteps.length - 1" class="fa-solid fa-arrow-right text-accent" aria-hidden="true"></i>
+                    </li>
+                </ol>
             </div>
         </header>
     </section>

@@ -25,6 +25,7 @@ function slugify(str: string) {
     <article :key="slugify(title)" class="flex flex-col rounded-lg border border-outline bg-secondary p-6 gap-4">
         <div>
             <img src="https://placehold.co/300x200/EEE/31343C" alt="Terminal introduction picture" class="w-full h-auto">
+<!--            TODO: Get images from the actual projects... -->
         </div>
 
         <span v-if="title" class="text-xl font-bold">
