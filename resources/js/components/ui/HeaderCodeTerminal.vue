@@ -45,7 +45,7 @@ const highlightedCode = computed(() => {
             </span>
         </div>
 
-        <pre class="terminal-code overflow-x-auto p-6 font-mono text-sm leading-7 text-body"><code v-html="highlightedCode" /></pre>
+        <pre class="terminal-code overflow-x-auto p-4 font-mono text-xs leading-6 text-body sm:p-6 sm:text-sm sm:leading-7"><code v-html="highlightedCode" /></pre>
     </div>
 </template>
 

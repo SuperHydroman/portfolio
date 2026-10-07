@@ -6,31 +6,32 @@ import ContactForm from "@/components/forms/ContactForm.vue";
 </script>
 
 <template>
-    <section id="contact" class="py-28">
+    <section id="contact">
         <SectionReveal>
-            <div class="container grid grid-cols-12 gap-x-8 gap-y-4">
-                <SubHeader text="GET IN TOUCH" class="col-span-12"/>
+            <div class="container grid grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-12 lg:gap-y-4">
+                <SubHeader text="GET IN TOUCH" class="lg:col-span-12" />
 
-                <div class="flex flex-col gap-y-6 col-span-6">
+                <div class="flex min-w-0 flex-col gap-y-6 lg:col-span-6">
                     <h3 class="text-5xl font-bold leading-12">
                         Let's work together
                     </h3>
 
-                    <h4 class="text-3xl font-bold">
+                    <h4 class="text-xl font-bold sm:text-2xl lg:text-3xl">
                         Have a project in mind?
                     </h4>
 
-                    <p class="text-xl text-body tracking-wide">
-                        I'm always open to discussing new opportunities,<br> creative ideas, or just having a chat about technology.
+                    <p class="text-base leading-relaxed text-body sm:text-lg lg:text-xl">
+                        I'm always open to discussing new opportunities, creative ideas,
+                        or just having a chat about technology.
                     </p>
 
-                    <div class="flex gap-8">
+                    <div class="flex flex-wrap gap-x-8 gap-y-3">
                         <Button href="https://github.com/SuperHydroMan" variant="ghost">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></Button>
                         <Button href="https://linkedin.com/in/gideon-van-den-herik/" variant="ghost">LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></Button>
                     </div>
                 </div>
 
-                <div class="col-span-6 gap-4">
+                <div class="min-w-0 lg:col-span-6">
                     <ContactForm />
                 </div>
             </div>

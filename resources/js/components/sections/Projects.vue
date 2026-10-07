@@ -39,27 +39,31 @@ const projects: Project[] = [
 </script>
 
 <template>
-    <section id="projects" class="py-28">
+    <section id="projects">
         <SectionReveal>
-            <div class="container grid grid-cols-12 gap-8">
-                <div class="flex flex-col gap-y-4 col-span-12">
+            <div class="container space-y-8">
+                <div class="flex flex-col gap-4">
                     <SubHeader text="SELECTED WORK" />
 
-                    <h3 class="text-5xl font-bold leading-12">
+                    <h3 class="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
                         Projects I've built
                     </h3>
 
-                    <p class="text-xl text-body tracking-wide">
+                    <p class="text-base leading-relaxed text-body sm:text-lg lg:text-xl">
                         A few things I've enjoyed working on.
                     </p>
                 </div>
-                <div class="col-span-12 grid grid-cols-4 gap-4">
+
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     <Card v-for="project in projects"
+                        :key="project.url"
                         :title="project.name"
                         :description="project.description"
                         :url="project.url"
                         :labels="project.technologies"
-                        :imageUrl="'https://placehold.co/300x200/071115/182226'" />
+                        imageUrl="https://placehold.co/300x200/071115/182226"
+                        class="w-full max-w-sm justify-self-center"
+                    />
                 </div>
             </div>
         </SectionReveal>

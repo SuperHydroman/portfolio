@@ -19,7 +19,7 @@ function submit() {
 </script>
 
 <template>
-    <form @submit.prevent="submit" class="flex flex-col rounded-lg border border-outline bg-secondary p-6 gap-4">
+    <form @submit.prevent="submit" class="flex min-w-0 flex-col gap-4 rounded-lg border border-outline bg-secondary p-4 sm:p-6">
         <div class="flex flex-col gap-2">
             <Input v-model="form.name" name="name" label="Name" placeholder="Your name" :error="form.errors.name" />
             <p v-if="form.errors.name" id="name-error" class="mt-2 text-sm text-error">

@@ -24,9 +24,9 @@ function slugify(str: string) {
 </script>
 
 <template>
-    <article :key="slugify(title)" class="flex flex-col h-full rounded-lg border border-outline bg-secondary p-6 gap-4">
+    <article :key="slugify(title)" class="flex h-full min-w-0 flex-col gap-4 rounded-lg border border-outline bg-secondary p-4 sm:p-6">
         <div v-if="imageUrl">
-            <img :src="imageUrl" alt="Terminal introduction picture" class="w-full h-auto">
+            <img :src="imageUrl" :alt="`${title} preview`" class="aspect-video w-full rounded-md object-cover" loading="lazy"/>
 <!--            TODO: Get images from the actual projects... -->
         </div>
 
@@ -39,7 +39,7 @@ function slugify(str: string) {
         </span>
 
         <!-- mt-auto pushes this section to the bottom of the card -->
-        <div v-if="labels || url" class="mt-auto flex items-center justify-between gap-2 pt-2">
+        <div v-if="labels || url" class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-2">
             <div v-if="labels" class="flex flex-wrap gap-2">
                 <span v-for="label in labels" :key="label" class="rounded bg-tertiary px-2 py-1 text-sm">
                     {{ label }}

@@ -39,10 +39,10 @@ const experiences: Experience[] = [
 </script>
 
 <template>
-    <section id="about-me" class="py-28">
+    <section id="about-me">
         <SectionReveal>
-            <div class="container grid grid-cols-12 gap-8">
-                <div class="flex flex-col gap-y-4 col-span-5">
+            <div class="container grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+                <div class="flex min-w-0 flex-col gap-y-4 lg:col-span-5">
                     <SubHeader text="ABOUT ME" />
 
                     <h3 class="text-5xl font-bold leading-12">
@@ -58,13 +58,13 @@ const experiences: Experience[] = [
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-y-4 col-span-6 col-start-7 w-full h-full">
+                <div class="flex min-w-0 flex-col gap-y-4 lg:col-span-6 lg:col-start-7">
                     <span class="font-mono uppercase text-muted font-medium">
                         EXPERIENCE
                     </span>
 
                     <ol class="ml-1 border-l border-outline">
-                        <li v-for="experience in experiences" :key="experience.id" class="relative pb-8 pl-6 last:pb-0">
+                        <li v-for="experience in experiences" :key="experience.id" class="relative pb-8 pl-5 sm:pl-6">
                             <span aria-hidden="true" class="absolute top-1.5 -left-px h-2 w-2 -translate-x-1/2 rounded-full bg-accent"></span>
 
                             <p class="font-mono text-sm text-accent">
@@ -84,7 +84,7 @@ const experiences: Experience[] = [
                             </p>
                         </li>
 
-                        <li class="relative pl-6">
+                        <li class="relative pl-5 sm:pl-6">
                             <span aria-hidden="true" class="absolute top-1.5 -left-px h-2 w-2 -translate-x-1/2 rounded-full bg-accent"></span>
 
                             <h4 class="font-semibold text-heading">

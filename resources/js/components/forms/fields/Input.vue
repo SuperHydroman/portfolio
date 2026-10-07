@@ -24,5 +24,6 @@ const model = defineModel<string>({ required: true });
         :type="props.type"
         :class="{ 'border-error!': Boolean(props.error) }"
         :aria-invalid="Boolean(props.error)"
-        :aria-describedby="props.error ? `${props.name}-error` : undefined" >
+        :aria-describedby="props.error ? `${props.name}-error` : undefined"
+        class="w-full min-w-0 text-base" >
 </template>

@@ -34,12 +34,12 @@ const developmentSteps = [
 </script>
 
 <template>
-    <section class="py-28">
-        <header class="container grid grid-cols-12 gap-8">
-            <div class="flex flex-col gap-6 col-span-5">
+    <section id="introduction">
+        <header class="container grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
+            <div class="flex min-w-0 flex-col gap-6 lg:col-span-5">
                 <SubHeader text="WELCOME TO MY PROFILE"/>
 
-                <h1 class="text-6xl font-bold leading-12">
+                <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
                     <span class="block">
                         Gideon
                     </span>
@@ -48,37 +48,49 @@ const developmentSteps = [
                     </span>
                 </h1>
 
-                <p class="text-3xl">
-                    <span class="block font-bold text-accent">Full-Stack Developer</span>
-                    <span class="text-2xl block">DevOps Engineer & IT Admin</span>
+                <p>
+                    <span class="block text-xl font-bold text-accent sm:text-2xl lg:text-3xl">
+                        Full-Stack Developer
+                    </span>
+
+                    <span class="block text-lg sm:text-xl lg:text-2xl">
+                        DevOps Engineer & IT Admin
+                    </span>
                 </p>
 
                 <p class="text-xl text-body tracking-wide">
                     I enjoy building software and understanding the systems behind it.
                 </p>
 
-                <div class="flex gap-x-4">
-                    <Button href="#projects">View my work <i class="fa-solid fa-arrow-right"></i></Button>
-                    <Button href="#contact" variant="secondary">Get in touch</Button>
+                <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+                    <Button href="#projects" target="_self">
+                        View my work
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </Button>
+
+                    <Button href="#contact" target="_self" variant="secondary">
+                        Get in touch
+                    </Button>
                 </div>
 
-                <ul class="flex flex-wrap gap-4 mt-4" v-if="randomizedTechnologies.length > 0">
+                <ul class="mt-4 flex flex-wrap gap-2 sm:gap-3" v-if="randomizedTechnologies.length > 0">
                     <li v-for="technology in randomizedTechnologies" :key="technology">
                         <Pill>{{ technology }}</Pill>
                     </li>
                 </ul>
             </div>
 
-            <div class="col-span-6 col-start-7">
+            <div class="min-w-0 lg:col-span-6 lg:col-start-7">
                 <HeaderCodeTerminal />
 
-                <ol aria-label="Development workflow" class="relative z-10 mx-4 -mt-6 flex items-center justify-end gap-3">
-                    <li v-for="(step, index) in developmentSteps" :key="step.label" class="flex items-center gap-3">
-                        <div class="flex h-24 w-24 flex-col items-center justify-center gap-3 rounded-xl border border-accent/30 bg-primary shadow-lg">
-                            <i :class="['fa-solid', step.icon]" class="text-2xl text-accent" aria-hidden="true"></i>
-                            <span class="text-sm text-heading">{{ step.label }}</span>
+                <ol aria-label="Development workflow" class="relative z-10 -mt-4 flex items-center justify-center gap-2 sm:mx-4 sm:-mt-6 sm:gap-3 xl:justify-end">
+                    <li v-for="(step, index) in developmentSteps" :key="step.label" class="flex items-center gap-2 sm:gap-3">
+                        <div class="flex h-16 w-16 shrink-0 flex-col items-center justify-center gap-2 rounded-xl border border-accent/30 bg-primary shadow-lg sm:h-20 sm:w-20 xl:h-24 xl:w-24">
+                            <i :class="['fa-solid', step.icon]" class="text-lg text-accent sm:text-2xl" aria-hidden="true"></i>
+                            <span class="text-xs text-heading sm:text-sm">{{ step.label }}</span>
                         </div>
-                        <i v-if="index < developmentSteps.length - 1" class="fa-solid fa-arrow-right text-accent" aria-hidden="true"></i>
+
+                        <i v-if="index < developmentSteps.length - 1" class="fa-solid fa-arrow-right shrink-0 text-xs text-accent sm:text-base" aria-hidden="true"></i>
                     </li>
                 </ol>
             </div>

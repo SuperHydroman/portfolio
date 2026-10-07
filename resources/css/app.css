@@ -40,6 +40,10 @@
     @apply py-4 flex justify-between;
 }
 
+section {
+    @apply py-16 sm:py-20 lg:py-28;
+}
+
 input, textarea {
     @apply border border-solid border-outline bg-primary rounded-md p-2;
 }
