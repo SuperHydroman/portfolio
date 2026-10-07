@@ -6,12 +6,14 @@ import Introduction from "@/components/sections/Introduction.vue";
 import AboutMe from "@/components/sections/AboutMe.vue";
 import Contact from "@/components/sections/Contact.vue";
 import Footer from "@/components/Footer.vue";
+import BackgroundBlobs from "@/components/BackgroundBlobs.vue";
 </script>
 
 <template>
     <Head title="Home" />
 
-    <div class="min-h-screen bg-primary text-heading">
+    <div class="relative isolate min-h-screen bg-primary text-heading">
+        <BackgroundBlobs />
         <SiteNavigation />
 
         <main>

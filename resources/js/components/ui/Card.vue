@@ -7,6 +7,7 @@ type Props = {
     description?: string;
     labels?: object;
     url?: string;
+    imageUrl?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -14,6 +15,7 @@ const props = withDefaults(defineProps<Props>(), {
     title: '',
     description: '',
     url: '',
+    imageUrl: '',
 });
 
 function slugify(str: string) {
@@ -23,8 +25,8 @@ function slugify(str: string) {
 
 <template>
     <article :key="slugify(title)" class="flex flex-col rounded-lg border border-outline bg-secondary p-6 gap-4">
-        <div>
-            <img src="https://placehold.co/300x200/EEE/31343C" alt="Terminal introduction picture" class="w-full h-auto">
+        <div v-if="imageUrl">
+            <img :src="imageUrl" alt="Terminal introduction picture" class="w-full h-auto">
 <!--            TODO: Get images from the actual projects... -->
         </div>
 
