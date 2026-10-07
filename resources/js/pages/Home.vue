@@ -13,6 +13,17 @@ import BackgroundBlobs from "@/components/BackgroundBlobs.vue";
     <Head title="Home" />
 
     <div class="relative isolate min-h-screen bg-primary text-heading">
+        <!--
+
+        TODO:
+        - Form validation (Contact form)
+        - Mobile responsiveness
+        - Project images
+        - Timeline animations? :P
+        - Make sure all styles are consistent throughout the webpage.
+            - Padding, margin, spacing etc
+
+        -->
         <BackgroundBlobs />
         <SiteNavigation />
 

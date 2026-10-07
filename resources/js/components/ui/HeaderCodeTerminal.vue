@@ -14,7 +14,8 @@ const code = ref(`const developer = {
         'Infrastructure',
         'DevOps Engineer',
         'IT Admin',
-        'Blender'
+        'Blender',
+        'Gaming'
     ],
     alwaysLearning: true
 };
