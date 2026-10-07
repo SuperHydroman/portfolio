@@ -59,7 +59,7 @@ const projects: Project[] = [
                         :description="project.description"
                         :url="project.url"
                         :labels="project.technologies"
-                        :imageUrl="'https://placehold.co/300x200/EEE/31343C'" />
+                        :imageUrl="'https://placehold.co/300x200/071115/182226'" />
                 </div>
             </div>
         </SectionReveal>
