@@ -12,15 +12,11 @@ import ContactForm from "@/components/forms/ContactForm.vue";
                 <SubHeader text="GET IN TOUCH" class="lg:col-span-12" />
 
                 <div class="flex min-w-0 flex-col gap-y-6 lg:col-span-6">
-                    <h3 class="text-5xl font-bold leading-12">
-                        Let's work together
-                    </h3>
+                    <h2>Let's work together</h2>
 
-                    <h4 class="text-xl font-bold sm:text-2xl lg:text-3xl">
-                        Have a project in mind?
-                    </h4>
+                    <h3>Have a project in mind?</h3>
 
-                    <p class="text-base leading-relaxed text-body sm:text-lg lg:text-xl">
+                    <p>
                         I'm always open to discussing new opportunities, creative ideas,
                         or just having a chat about technology.
                     </p>

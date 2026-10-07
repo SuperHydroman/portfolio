@@ -114,12 +114,7 @@ onBeforeUnmount(() => {
                 <feColorMatrix
                     in="blurred"
                     type="matrix"
-                    values="
-                        1 0 0 0 0
-                        0 1 0 0 0
-                        0 0 1 0 0
-                        0 0 0 20 -8
-                    "
+                    values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 20 -8"
                 />
             </filter>
         </defs>

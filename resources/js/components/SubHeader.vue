@@ -7,7 +7,7 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-    <span class="font-mono uppercase text-accent font-medium tracking-wide">
-        // {{ text }}
+    <span class="subheader">
+        // {{ props.text }}
     </span>
 </template>

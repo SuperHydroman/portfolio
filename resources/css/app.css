@@ -1,53 +1,57 @@
 @import 'tailwindcss';
+@import './theme.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
-@theme inline {
-    --font-sans:
-        Instrument Sans, ui-sans-serif, system-ui, sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-        'Noto Color Emoji';
+@layer base {
+    h1 {
+        @apply text-4xl font-bold leading-tight text-heading sm:text-5xl lg:text-6xl;
+    }
+
+    h2 {
+        @apply text-3xl font-bold leading-tight text-heading sm:text-4xl lg:text-5xl;
+    }
+
+    h3 {
+        @apply text-xl font-bold leading-snug text-heading sm:text-2xl;
+    }
+
+    h4 {
+        @apply text-base font-semibold leading-snug text-heading;
+    }
+
+    p {
+        @apply text-base leading-relaxed text-body;
+    }
+
+    section {
+        @apply py-16 sm:py-20 lg:py-28;
+    }
+
+    input, textarea {
+        @apply border border-solid border-outline bg-primary rounded-md p-2;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    footer p {
+        @apply text-sm text-muted;
+    }
 }
 
-@theme {
-    /* Backgrounds */
-    --color-primary: #071115;
-    --color-secondary: #0D1A22;
-    --color-tertiary: #081319;
+@layer components {
+    .subheader {
+        @apply font-mono text-xs font-medium uppercase tracking-wide text-accent sm:text-sm;
+    }
 
-    /* Borders */
-    --color-outline: #20323C;
+    .container {
+        @apply mx-auto px-5 sm:px-8 lg:px-16;
+    }
 
-    /* Text */
-    --color-heading: #EAEAEA;
-    --color-body: #A0AEC0;
-    --color-muted: #7B8C9A;
-
-    /* Accents */
-    --color-accent: #00DDEA;
-    --color-accent-hover: #67ECF5;
-
-    /* MessageTypes */
-    --color-error: #FF6467;
-}
-
-.container {
-    @apply mx-auto px-16;
-}
-
-.nav {
-    @apply py-4 flex justify-between;
-}
-
-section {
-    @apply py-16 sm:py-20 lg:py-28;
-}
-
-input, textarea {
-    @apply border border-solid border-outline bg-primary rounded-md p-2;
-}
-
-button {
-    cursor: pointer;
+    .nav {
+        @apply py-4 flex justify-between;
+    }
 }

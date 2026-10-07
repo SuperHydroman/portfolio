@@ -45,12 +45,11 @@ const experiences: Experience[] = [
                 <div class="flex min-w-0 flex-col gap-y-4 lg:col-span-5">
                     <SubHeader text="ABOUT ME" />
 
-                    <h3 class="text-5xl font-bold leading-12">
-                        Curiosity keeps me building.
-                    </h3>
+                    <h2>Curiosity keeps me building.</h2>
 
-                    <p class="text-xl text-body tracking-wide">
-                        I enjoy working across software development and infrastructure. Personal projects give me room to experiment and learn.
+                    <p>
+                        I enjoy working across software development and infrastructure.
+                        Personal projects give me room to experiment and learn.
                     </p>
 
                     <div>
@@ -59,9 +58,9 @@ const experiences: Experience[] = [
                 </div>
 
                 <div class="flex min-w-0 flex-col gap-y-4 lg:col-span-6 lg:col-start-7">
-                    <span class="font-mono uppercase text-muted font-medium">
-                        EXPERIENCE
-                    </span>
+                    <h3 class="subheader text-muted">
+                        Experience
+                    </h3>
 
                     <ol class="ml-1 border-l border-outline">
                         <li v-for="experience in experiences" :key="experience.id" class="relative pb-8 pl-5 sm:pl-6">
@@ -71,15 +70,15 @@ const experiences: Experience[] = [
                                 {{ experience.period }}
                             </p>
 
-                            <h4 class="mt-1 text-base font-semibold text-heading">
+                            <h4 class="mt-1">
                                 {{ experience.role }}
                             </h4>
 
-                            <p class="mt-1 text-sm text-body">
+                            <p class="mt-1 text-sm">
                                 {{ experience.organization }}
                             </p>
 
-                            <p class="mt-2 text-sm leading-relaxed text-muted">
+                            <p class="mt-2 text-sm text-muted">
                                 {{ experience.description }}
                             </p>
                         </li>
@@ -87,11 +86,9 @@ const experiences: Experience[] = [
                         <li class="relative pl-5 sm:pl-6">
                             <span aria-hidden="true" class="absolute top-1.5 -left-px h-2 w-2 -translate-x-1/2 rounded-full bg-accent"></span>
 
-                            <h4 class="font-semibold text-heading">
-                                More about my experience
-                            </h4>
+                            <h4>More about my experience</h4>
 
-                            <p class="mt-2 text-sm text-body">
+                            <p class="mt-2 text-sm">
                                 Want to learn more about my experience, background, and skills?
                             </p>
 

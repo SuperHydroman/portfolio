@@ -3,6 +3,7 @@ import Button from "@/components/ui/Button.vue";
 import Pill from "@/components/ui/Pill.vue";
 import HeaderCodeTerminal from "@/components/ui/HeaderCodeTerminal.vue";
 import SubHeader from "@/components/SubHeader.vue";
+import {onMounted, ref} from "vue";
 
 const githubUrl = 'https://github.com/SuperHydroMan';
 
@@ -23,8 +24,19 @@ const technologies = [
     'Git',
 ]
 
-const randomizedTechnologies = [...technologies].sort(
-    () => Math.random() - 0.5);
+const randomizedTechnologies = ref([...technologies]);
+
+onMounted(() => {
+    const shuffled = [...technologies];
+
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+
+        [shuffled[i], shuffled[j]] = [shuffled[j]!, shuffled[i]!];
+    }
+
+    randomizedTechnologies.value = shuffled;
+});
 
 const developmentSteps = [
     { label: 'Code', icon: 'fa-code' },
@@ -39,13 +51,9 @@ const developmentSteps = [
             <div class="flex min-w-0 flex-col gap-6 lg:col-span-5">
                 <SubHeader text="WELCOME TO MY PROFILE"/>
 
-                <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-                    <span class="block">
-                        Gideon
-                    </span>
-                    <span class="block">
-                        van den Herik
-                    </span>
+                <h1>
+                    <span class="block">Gideon</span>
+                    <span class="block">van den Herik</span>
                 </h1>
 
                 <p>
@@ -53,12 +61,12 @@ const developmentSteps = [
                         Full-Stack Developer
                     </span>
 
-                    <span class="block text-lg sm:text-xl lg:text-2xl">
+                    <span class="block text-lg text-heading sm:text-xl lg:text-2xl">
                         DevOps Engineer & IT Admin
                     </span>
                 </p>
 
-                <p class="text-xl text-body tracking-wide">
+                <p>
                     I enjoy building software and understanding the systems behind it.
                 </p>
 

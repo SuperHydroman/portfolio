@@ -30,13 +30,13 @@ function slugify(str: string) {
 <!--            TODO: Get images from the actual projects... -->
         </div>
 
-        <span v-if="title" class="text-xl font-bold">
+        <h3 v-if="title">
             {{ title }}
-        </span>
+        </h3>
 
-        <span v-if="description" class="text-body">
+        <p v-if="description">
             {{ description }}
-        </span>
+        </p>
 
         <!-- mt-auto pushes this section to the bottom of the card -->
         <div v-if="labels || url" class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-2">

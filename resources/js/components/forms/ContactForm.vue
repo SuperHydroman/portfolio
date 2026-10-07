@@ -48,8 +48,10 @@ function submit() {
         <Button type="submit"
                 :disabled="form.processing"
                 :aria-disabled="form.processing"
-                variant="primary"
-                class="text-xl font-medium">{{ form.processing ? 'Sending...' : 'Send message' }}<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></Button>
+                variant="primary">
+            {{ form.processing ? 'Sending...' : 'Send message' }}
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </Button>
     </form>
 </template>
 

@@ -45,13 +45,9 @@ const projects: Project[] = [
                 <div class="flex flex-col gap-4">
                     <SubHeader text="SELECTED WORK" />
 
-                    <h3 class="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-                        Projects I've built
-                    </h3>
+                    <h2>Projects I've built</h2>
 
-                    <p class="text-base leading-relaxed text-body sm:text-lg lg:text-xl">
-                        A few things I've enjoyed working on.
-                    </p>
+                    <p>A few things I've enjoyed working on.</p>
                 </div>
 
                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
