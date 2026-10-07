@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Button from "@/components/ui/Button.vue";
-import SectionReveal from "@/components/SectionReveal.vue";
+import SectionReveal from "@/components/ui/SectionReveal.vue";
 import SubHeader from "@/components/SubHeader.vue";
 
 type Experience = {

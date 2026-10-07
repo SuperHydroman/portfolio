@@ -6,21 +6,21 @@ import Introduction from "@/components/sections/Introduction.vue";
 import AboutMe from "@/components/sections/AboutMe.vue";
 import Contact from "@/components/sections/Contact.vue";
 import Footer from "@/components/Footer.vue";
-import BackgroundBlobs from "@/components/BackgroundBlobs.vue";
+import BackgroundBlobs from "@/components/ui/BackgroundBlobs.vue";
 </script>
 
 <template>
     <Head title="Home" />
 
-    <div class="relative isolate min-h-screen bg-primary text-heading">
+    <div class="relative isolate min-h-screen bg-primary text-heading" id="home">
         <!--
 
         TODO:
-        - Form validation (Contact form)
-        - Mobile responsiveness
-        - Project images
-        - Timeline animations? :P
-        - Make sure all styles are consistent throughout the webpage.
+        - [x] Form validation (Contact form)
+        - [ ] Mobile responsiveness
+        - [ ] Project images
+        - [ ] Timeline animations? :P
+        - [ ] Make sure all styles are consistent throughout the webpage.
             - Padding, margin, spacing etc
 
         -->

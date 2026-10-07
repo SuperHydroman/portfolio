@@ -27,6 +27,9 @@
     /* Accents */
     --color-accent: #00DDEA;
     --color-accent-hover: #67ECF5;
+
+    /* MessageTypes */
+    --color-error: #FF6467;
 }
 
 .container {

@@ -4,7 +4,7 @@ import logoImage from '@images/logo.svg';
 const links = [
     { label: 'Home', href: '#home' },
     { label: 'Projects', href: '#projects' },
-    { label: 'About', href: '#about' },
+    { label: 'About', href: '#about-me' },
     { label: 'Contact', href: '#contact' }
 ];
 </script>
@@ -13,9 +13,9 @@ const links = [
     <div class="container">
         <nav aria-label="Main navigation" class="nav">
             <!-- Logo -->
-            <div>
+            <a href="#home">
                 <img :src="logoImage" alt="Logo" class="h-8" />
-            </div>
+            </a>
 
             <!-- Navigation -->
             <div class="flex gap-8 items-center">
@@ -26,10 +26,10 @@ const links = [
                 <!-- Theme switcher -->
                 <span>
                     <button class="w-8 h-8 bg-transparent border border-muted rounded-full hover:bg-secondary">
-                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-moon" aria-hidden="true"></i>
 
                         <!-- Sun -->
-<!--                        <i class="fa-solid fa-sun"></i>-->
+<!--                        <i class="fa-solid fa-sun" aria-hidden="true"></i>-->
                     </button>
                 </span>
             </div>

@@ -3,11 +3,13 @@ type Props = {
     href?: string;
     variant?: 'primary' | 'secondary' | 'ghost';
     type?: 'button' | 'submit' | 'reset';
+    target?: '_blank' | '_self' | '_parent' | '_top';
 }
 
 const props = withDefaults(defineProps<Props>(), {
     variant: 'primary',
     type: 'button',
+    target: '_blank'
 })
 
 const variants = {
@@ -21,6 +23,7 @@ const variants = {
     <component
         :is="props.href ? 'a' : 'button'"
         :href="props.href"
+        :target="props.target"
         :type="props.type"
         :class="variants[props.variant]"
         class="inline-flex items-center justify-center gap-2 rounded-md border text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus:outline-accent"

@@ -34,7 +34,7 @@ const developmentSteps = [
 </script>
 
 <template>
-    <section id="home" class="py-28">
+    <section class="py-28">
         <header class="container grid grid-cols-12 gap-8">
             <div class="flex flex-col gap-6 col-span-5">
                 <SubHeader text="WELCOME TO MY PROFILE"/>
