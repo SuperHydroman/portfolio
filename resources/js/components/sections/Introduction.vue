@@ -4,6 +4,7 @@ import Pill from "@/components/ui/Pill.vue";
 import HeaderCodeTerminal from "@/components/ui/HeaderCodeTerminal.vue";
 import SubHeader from "@/components/SubHeader.vue";
 import {onMounted, ref} from "vue";
+import TypewriterText from '@/components/ui/TypewriterText.vue';
 
 const githubUrl = 'https://github.com/SuperHydroMan';
 
@@ -66,9 +67,7 @@ const developmentSteps = [
                     </span>
                 </p>
 
-                <p>
-                    I enjoy building software and understanding the systems behind it.
-                </p>
+                <TypewriterText />
 
                 <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
                     <Button href="#projects" target="_self">

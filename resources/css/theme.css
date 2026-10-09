@@ -5,6 +5,7 @@
         'Noto Color Emoji';
 }
 
+/* Default: your existing dark palette */
 @theme {
     /* Backgrounds */
     --color-primary: #071115;
@@ -13,6 +14,7 @@
 
     /* Borders */
     --color-outline: #20323C;
+    --color-input-border: #506774;
 
     /* Text */
     --color-heading: #EAEAEA;
@@ -22,7 +24,41 @@
     /* Accents */
     --color-accent: #00DDEA;
     --color-accent-hover: #67ECF5;
+    --color-on-accent: #071115;
 
     /* MessageTypes */
     --color-error: #FF6467;
+    --color-code-string: #93BC82;
+    --color-code-property: #BDA17E;
+}
+
+:root {
+    color-scheme: dark;
+    --blob-opacity: 0.1;
+}
+
+:root[data-theme='light'] {
+    color-scheme: light;
+
+    --color-primary: #F4F8FA;
+    --color-secondary: #FFFFFF;
+    --color-tertiary: #E8F0F4;
+
+    --color-outline: #CBD8DF;
+    --color-input-border: #7B8C99;
+
+    --color-heading: #142B36;
+    --color-body: #425B68;
+    --color-muted: #526976;
+
+    --color-accent: #006E7A;
+    --color-accent-hover: #005662;
+    --color-on-accent: #FFFFFF;
+
+    --color-error: #B42336;
+
+    --color-code-string: #326B3F;
+    --color-code-property: #885622;
+
+    --blob-opacity: 0.15;
 }

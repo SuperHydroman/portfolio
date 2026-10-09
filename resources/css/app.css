@@ -5,6 +5,10 @@
 @source '../../storage/framework/views/*.php';
 
 @layer base {
+    body {
+        @apply bg-primary text-heading;
+    }
+
     h1 {
         @apply text-4xl font-bold leading-tight text-heading sm:text-5xl lg:text-6xl;
     }
@@ -29,8 +33,21 @@
         @apply py-16 sm:py-20 lg:py-28;
     }
 
-    input, textarea {
-        @apply border border-solid border-outline bg-primary rounded-md p-2;
+    input,
+    textarea {
+        @apply rounded-md border border-solid border-input-border bg-primary p-2 text-heading caret-accent;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        @apply text-muted;
+        opacity: 1;
+    }
+
+    input:focus-visible,
+    textarea:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 2px;
     }
 
     button {
@@ -53,5 +70,38 @@
 
     .nav {
         @apply py-4 flex justify-between;
+    }
+
+    .terminal-code :deep(.hljs-keyword),
+    .terminal-code :deep(.hljs-literal) {
+        color: var(--color-accent);
+    }
+
+    .terminal-code :deep(.hljs-string) {
+        color: rgb(97 140 79);
+    }
+
+    .terminal-code :deep(.hljs-comment) {
+        color: var(--color-muted);
+        font-style: italic;
+    }
+
+    .terminal-code :deep(.hljs-attr) {
+        color: rgb(168 135 105);
+    }
+
+    .terminal-code :deep(.hljs-title),
+    .terminal-code :deep(.hljs-number) {
+        color: var(--color-heading);
+    }
+}
+
+@keyframes typing-caret {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
     }
 }

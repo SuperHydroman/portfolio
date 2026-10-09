@@ -17,10 +17,10 @@ import BackgroundBlobs from "@/components/ui/BackgroundBlobs.vue";
 
         TODO:
         - [x] Form validation (Contact form)
-        - [ ] Mobile responsiveness
+        - [x] Mobile responsiveness
         - [ ] Project images
         - [ ] Timeline animations? :P
-        - [ ] Make sure all styles are consistent throughout the webpage.
+        - [x] Make sure all styles are consistent throughout the webpage.
             - Padding, margin, spacing etc
 
         -->

@@ -56,7 +56,8 @@ const highlightedCode = computed(() => {
 }
 
 .terminal-code :deep(.hljs-string) {
-    color: rgb(97 140 79);
+    /*color: rgb(97 140 79);*/
+    color: var(--color-code-string);
 }
 
 .terminal-code :deep(.hljs-comment) {
@@ -65,7 +66,8 @@ const highlightedCode = computed(() => {
 }
 
 .terminal-code :deep(.hljs-attr) {
-    color: rgb(168 135 105);
+    /*color: rgb(168 135 105);*/
+    color: var(--color-code-property);
 }
 
 .terminal-code :deep(.hljs-title),

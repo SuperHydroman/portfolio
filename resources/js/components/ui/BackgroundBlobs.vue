@@ -150,7 +150,7 @@ onBeforeUnmount(() => {
 .blob-appearance {
     position: absolute;
     inset: 0;
-    opacity: 0.1;
+    opacity: var(--blob-opacity);
     filter: blur(75px);
 }
 
@@ -167,6 +167,6 @@ onBeforeUnmount(() => {
     width: clamp(16rem, 32vw, 32rem);
     aspect-ratio: 1;
     border-radius: 50%;
-    background: #00DDEA;
+    background: var(--color-accent);
 }
 </style>
