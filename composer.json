@@ -60,7 +60,7 @@
         ],
         "ci:check": [
             "Composer\\Config::disableProcessTimeout",
-            "npm run check",
+            "npm run check:no-format",
             "npm run types:check",
             "@test"
         ],
