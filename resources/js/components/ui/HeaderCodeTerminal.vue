@@ -20,7 +20,7 @@ const code = ref(`const developer = {
     alwaysLearning: true
 };
 
-// Builing software and
+// Building software and
 // understanding how it works.`);
 
 const highlightedCode = computed(() => {
