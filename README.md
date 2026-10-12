@@ -8,13 +8,11 @@ This is my personal portfolio. I use it to share my projects and what I'm workin
 
 ## The portfolio
 
-A single-page site with a dark theme and cyan accents. It currently features three of my GitHub projects: a Lua platformer, a JavaScript fighting game, and a top-down shooter.
+A single-page site with light and dark themes and cyan accents. It features four of my GitHub projects: a Lua platformer, a JavaScript fighting game, a top-down shooter, and a console-based RPG battle game.
 
 I'm building this myself to get more familiar with Vue, Inertia, and TypeScript. It's still a work in progress.
 
-**Built so far:** introduction, section navigation, and project cards with technology tags and repository links.
-
-**Up next:** background and experience, and a contact section.
+The site includes an introduction, section navigation, project cards with technology tags and repository links, an experience timeline, and a contact form with validation and rate limiting.
 
 ## Stack
 
@@ -48,29 +46,30 @@ The setup script installs dependencies, creates `.env` if it's missing, generate
 
 The development command starts Laravel, Vite, and the queue listener. Open [localhost:8000](http://localhost:8000).
 
-PHP must be available in your terminal, including when building the frontend: the existing Wayfinder plugin calls Artisan during the build.
+PHP must be available in your terminal, including when building the frontend: the Wayfinder plugin calls Artisan during the build.
 
 ## Useful commands
 
 ```sh
-npm run build          # Build production assets
-npm run check          # Check frontend formatting and linting
-npm run types:check    # Check TypeScript and Vue types
-composer test          # Run PHP formatting checks, static analysis, and tests
+composer ci:check      # Run all formatting, linting, type checks, and tests
+
+npm run check         # Check frontend formatting and linting
+npm run check:fix     # Apply frontend formatting and lint fixes
+npm run types:check   # Check Vue and TypeScript types
+
+composer lint         # Format PHP code
+composer lint:check   # Check PHP formatting
+composer types:check  # Run PHP static analysis
+composer test         # Run PHP formatting checks, static analysis, and tests
+php artisan test      # Run tests only
+
+npm run build         # Build production assets
+npm run build:ssr     # Build client and SSR assets
 ```
 
-## Where things live
+GitHub Actions runs the build and CI checks on pushes to `main` and pull requests.
 
-- `resources/js/pages/Home.vue`: puts the homepage together
-- `resources/js/components/SiteNavigation.vue`: section navigation
-- `resources/js/components/sections/`: introduction and project sections
-- `resources/js/lib/utils.ts`: shared helpers
-- `resources/css/app.css`: stylesheet entry point
-- `routes/web.php`: homepage route
-
-## Hosting
-
-The site uses the existing GitHub-to-Plesk deployment setup. The Laravel project is deployed to `httpdocs`, with the web root pointing to `httpdocs/public`.
+Contact-form tests cover validation, email content, mail failures, and rate limiting without sending real emails.
 
 ## Contact
 

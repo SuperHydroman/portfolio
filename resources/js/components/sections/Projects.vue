@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import Card from "@/components/ui/Card.vue";
-import SectionReveal from "@/components/ui/SectionReveal.vue";
-import SubHeader from "@/components/SubHeader.vue";
+import Card from '@/components/ui/Card.vue';
+import SectionReveal from '@/components/ui/SectionReveal.vue';
+import SubHeader from '@/components/SubHeader.vue';
 
 type Project = {
     name: string;
     description: string;
     url: string;
     technologies: string[];
-}
+};
 
 const projects: Project[] = [
     {
         name: 'Platformer Game',
         description: 'A platformer project built with lua.',
         url: 'https://github.com/SuperHydroMan/Platformer-Game',
-        technologies: ['LUA']
+        technologies: ['LUA'],
     },
     {
         name: 'JavaScript Fighter',
@@ -34,8 +34,8 @@ const projects: Project[] = [
         description: 'A console-based RPG battle game built with C#.',
         url: 'https://github.com/SuperHydroMan/RPGBattle',
         technologies: ['C#'],
-    }
-]
+    },
+];
 </script>
 
 <template>
@@ -50,8 +50,11 @@ const projects: Project[] = [
                     <p>A few things I've enjoyed working on.</p>
                 </div>
 
-                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    <Card v-for="project in projects"
+                <div
+                    class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                >
+                    <Card
+                        v-for="project in projects"
                         :key="project.url"
                         :title="project.name"
                         :description="project.description"

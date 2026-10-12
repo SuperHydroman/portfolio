@@ -1,14 +1,14 @@
 <script setup lang="ts">
 type Props = {
-    name: string,
-    label: string,
-    placeholder: string,
-    type?: string,
-    error?: string
-}
+    name: string;
+    label: string;
+    placeholder: string;
+    type?: string;
+    error?: string;
+};
 
 const props = withDefaults(defineProps<Props>(), {
-    type: 'text'
+    type: 'text',
 });
 
 const model = defineModel<string>({ required: true });
@@ -25,5 +25,6 @@ const model = defineModel<string>({ required: true });
         :class="{ 'border-error!': Boolean(props.error) }"
         :aria-invalid="Boolean(props.error)"
         :aria-describedby="props.error ? `${props.name}-error` : undefined"
-        class="w-full min-w-0 text-base" >
+        class="w-full min-w-0 text-base"
+    />
 </template>

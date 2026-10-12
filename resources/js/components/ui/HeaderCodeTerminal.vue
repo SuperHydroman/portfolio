@@ -74,4 +74,6 @@ const highlightedCode = computed(() => {
 .terminal-code :deep(.hljs-number) {
     color: var(--color-heading);
 }
+
+
 </style>

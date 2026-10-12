@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Button from "@/components/ui/Button.vue";
-import SectionReveal from "@/components/ui/SectionReveal.vue";
-import SubHeader from "@/components/SubHeader.vue";
+import Button from '@/components/ui/Button.vue';
+import SectionReveal from '@/components/ui/SectionReveal.vue';
+import SubHeader from '@/components/SubHeader.vue';
 
 type Experience = {
     id: string;
@@ -9,7 +9,7 @@ type Experience = {
     role: string;
     organization: string;
     description: string;
-}
+};
 
 // Example content. Replace this with your actual experience.
 const experiences: Experience[] = [
@@ -18,53 +18,72 @@ const experiences: Experience[] = [
         period: 'feb 2025 to present',
         role: 'Junior Software Developer / System Admin / DevOps Engineer',
         organization: 'GMS Digitaliseert',
-        description: 'I maintain and update servers, assemble hardware, and contribute to internal software that helps speed up the digitization process at GMS.',
+        description:
+            'I maintain and update servers, assemble hardware, and contribute to internal software that helps speed up the digitization process at GMS.',
     },
     {
         id: 'wadm-role',
         period: 'dec 2023 to jan 2026',
         role: 'Junior Back-end Ontwikkelaar',
         organization: 'WADM',
-        description: 'I developed and maintained the back end of various websites, ensuring stable, secure, and scalable solutions.',
+        description:
+            'I developed and maintained the back end of various websites, ensuring stable, secure, and scalable solutions.',
     },
     {
         id: 'mcdonalds-role',
         period: 'okt 2019 - nov 2023',
         role: 'All-round Fast Food Server',
         organization: 'McDonalds',
-        description: 'I worked across different areas of the restaurant, from preparing burgers to taking drive-through orders and helping customers place their orders in the restaurant.',
+        description:
+            'I worked across different areas of the restaurant, from preparing burgers to taking drive-through orders and helping customers place their orders in the restaurant.',
     },
 ];
-
 </script>
 
 <template>
     <section id="about-me">
         <SectionReveal>
-            <div class="container grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8">
+            <div
+                class="container grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-8"
+            >
                 <div class="flex min-w-0 flex-col gap-y-4 lg:col-span-5">
                     <SubHeader text="ABOUT ME" />
 
                     <h2>Curiosity keeps me building.</h2>
 
                     <p>
-                        I enjoy working across software development and infrastructure.
-                        Personal projects give me room to experiment and learn.
+                        I enjoy working across software development and
+                        infrastructure. Personal projects give me room to
+                        experiment and learn.
                     </p>
 
                     <div>
-                        <Button href="https://linkedin.com/in/gideon-van-den-herik/" variant="ghost">LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></Button>
+                        <Button
+                            href="https://linkedin.com/in/gideon-van-den-herik/"
+                            variant="ghost"
+                            >LinkedIn
+                            <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                            ></i
+                        ></Button>
                     </div>
                 </div>
 
-                <div class="flex min-w-0 flex-col gap-y-4 lg:col-span-6 lg:col-start-7">
-                    <h3 class="subheader text-muted">
-                        Experience
-                    </h3>
+                <div
+                    class="flex min-w-0 flex-col gap-y-4 lg:col-span-6 lg:col-start-7"
+                >
+                    <h3 class="subheader text-muted">Experience</h3>
 
                     <ol class="ml-1 border-l border-outline">
-                        <li v-for="experience in experiences" :key="experience.id" class="relative pb-8 pl-5 sm:pl-6">
-                            <span aria-hidden="true" class="absolute top-1.5 -left-px h-2 w-2 -translate-x-1/2 rounded-full bg-accent"></span>
+                        <li
+                            v-for="experience in experiences"
+                            :key="experience.id"
+                            class="relative pb-8 pl-5 sm:pl-6"
+                        >
+                            <span
+                                aria-hidden="true"
+                                class="absolute top-1.5 -left-px h-2 w-2 -translate-x-1/2 rounded-full bg-accent"
+                            ></span>
 
                             <p class="font-mono text-sm text-accent">
                                 {{ experience.period }}
@@ -84,16 +103,26 @@ const experiences: Experience[] = [
                         </li>
 
                         <li class="relative pl-5 sm:pl-6">
-                            <span aria-hidden="true" class="absolute top-1.5 -left-px h-2 w-2 -translate-x-1/2 rounded-full bg-accent"></span>
+                            <span
+                                aria-hidden="true"
+                                class="absolute top-1.5 -left-px h-2 w-2 -translate-x-1/2 rounded-full bg-accent"
+                            ></span>
 
                             <h4>More about my experience</h4>
 
                             <p class="mt-2 text-sm">
-                                Want to learn more about my experience, background, and skills?
+                                Want to learn more about my experience,
+                                background, and skills?
                             </p>
 
-                            <Button href="https://www.linkedin.com/in/gideon-van-den-herik/" variant="ghost">
-                                View my LinkedIn profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            <Button
+                                href="https://www.linkedin.com/in/gideon-van-den-herik/"
+                                variant="ghost"
+                            >
+                                View my LinkedIn profile
+                                <i
+                                    class="fa-solid fa-arrow-up-right-from-square"
+                                ></i>
                             </Button>
                         </li>
                     </ol>

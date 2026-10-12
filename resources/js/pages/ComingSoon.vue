@@ -9,35 +9,58 @@ const year = new Date().getFullYear();
 
 <template>
     <Head title="Coming soon">
-        <meta name="description" content="Gideon van den Herik. Full-Stack Developer & DevOps Engineer. My new portfolio is on its way. Explore my projects on GitHub or connect on LinkedIn."/>
+        <meta
+            name="description"
+            content="Gideon van den Herik. Full-Stack Developer & DevOps Engineer. My new portfolio is on its way. Explore my projects on GitHub or connect on LinkedIn."
+        />
         <meta name="theme-color" content="#071115" />
     </Head>
 
-    <div class="coming-soon relative isolate flex min-h-svh flex-col overflow-hidden bg-primary text-heading">
-        <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+    <div
+        class="coming-soon relative isolate flex min-h-svh flex-col overflow-hidden bg-primary text-heading"
+    >
+        <div
+            aria-hidden="true"
+            class="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+        >
             <div class="bloom bloom-one" />
             <div class="bloom bloom-two" />
         </div>
 
         <a href="#main" class="skip-link">Skip to content</a>
 
-        <header class="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-6 py-7 lg:px-8">
-            <a href="/" :aria-label="`${name}, home`" class="text-2xl font-bold tracking-tight">
+        <header
+            class="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-6 py-7 lg:px-8"
+        >
+            <a
+                href="/"
+                :aria-label="`${name}, home`"
+                class="text-2xl font-bold tracking-tight"
+            >
                 gideon<span class="text-accent">.</span>
             </a>
 
-            <span class="font-mono text-[10px] tracking-[0.18em] text-muted sm:text-xs">
+            <span
+                class="font-mono text-[10px] tracking-[0.18em] text-muted sm:text-xs"
+            >
                 PORTFOLIO / IN PROGRESS
             </span>
         </header>
 
-        <main id="main" class="mx-auto grid w-full max-w-7xl flex-1 content-center items-center gap-16 px-6 py-20 lg:grid-cols-[1.1fr_1fr] lg:gap-20 lg:px-8 lg:py-28">
+        <main
+            id="main"
+            class="mx-auto grid w-full max-w-7xl flex-1 content-center items-center gap-16 px-6 py-20 lg:grid-cols-[1.1fr_1fr] lg:gap-20 lg:px-8 lg:py-28"
+        >
             <div class="entrance">
-                <p class="font-mono text-xs tracking-[0.2em] text-accent uppercase">
+                <p
+                    class="font-mono text-xs tracking-[0.2em] text-accent uppercase"
+                >
                     // A work in progress
                 </p>
 
-                <h1 class="mt-7 text-5xl leading-[1.08] font-semibold tracking-tight sm:text-6xl xl:text-7xl">
+                <h1
+                    class="mt-7 text-5xl leading-[1.08] font-semibold tracking-tight sm:text-6xl xl:text-7xl"
+                >
                     A new home<br />
                     for my work<span class="text-accent">.</span>
                 </h1>
@@ -52,15 +75,22 @@ const year = new Date().getFullYear();
 
                 <p class="mt-7 max-w-md text-base leading-relaxed text-body">
                     I'm putting together my projects, experience, and the things
-                    I've learned along the way. The new portfolio is coming soon.
+                    I've learned along the way. The new portfolio is coming
+                    soon.
                 </p>
 
                 <div class="mt-9 flex flex-wrap gap-3">
-                    <a :href="githubUrl" class="inline-flex items-center justify-center gap-5 rounded-md border border-accent bg-accent px-5 py-3.5 text-sm font-semibold text-primary transition-colors hover:border-accent-hover hover:bg-accent-hover">
+                    <a
+                        :href="githubUrl"
+                        class="inline-flex items-center justify-center gap-5 rounded-md border border-accent bg-accent px-5 py-3.5 text-sm font-semibold text-primary transition-colors hover:border-accent-hover hover:bg-accent-hover"
+                    >
                         Explore my GitHub
                         <span aria-hidden="true">↗</span>
                     </a>
-                    <a :href="linkedinUrl" class="inline-flex items-center justify-center gap-5 rounded-md border border-outline px-5 py-3.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent">
+                    <a
+                        :href="linkedinUrl"
+                        class="inline-flex items-center justify-center gap-5 rounded-md border border-outline px-5 py-3.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent"
+                    >
                         Connect on LinkedIn
                         <span aria-hidden="true">↗</span>
                     </a>
@@ -73,8 +103,12 @@ const year = new Date().getFullYear();
 
             <!-- Decorative code illustration. The launch notice is above. -->
             <div aria-hidden="true" class="entrance terminal-entrance min-w-0">
-                <div class="overflow-hidden rounded-xl border border-outline/70 bg-secondary/65 shadow-xl shadow-black/10">
-                    <div class="flex items-center gap-5 border-b border-outline/60 px-5 py-4">
+                <div
+                    class="overflow-hidden rounded-xl border border-outline/70 bg-secondary/65 shadow-xl shadow-black/10"
+                >
+                    <div
+                        class="flex items-center gap-5 border-b border-outline/60 px-5 py-4"
+                    >
                         <div class="flex gap-1.5">
                             <span class="size-2 rounded-full bg-[#bd6c70]" />
                             <span class="size-2 rounded-full bg-[#bca270]" />
@@ -85,11 +119,18 @@ const year = new Date().getFullYear();
                         </span>
                     </div>
 
-                    <div class="space-y-1.5 px-5 py-8 font-mono text-[11px] leading-relaxed text-body sm:px-7 sm:py-10 sm:text-sm">
-                        <p class="mb-6 text-muted">// Making room for what's next.</p>
-                        <p><span class="text-accent">const</span> portfolio = {</p>
+                    <div
+                        class="space-y-1.5 px-5 py-8 font-mono text-[11px] leading-relaxed text-body sm:px-7 sm:py-10 sm:text-sm"
+                    >
+                        <p class="mb-6 text-muted">
+                            // Making room for what's next.
+                        </p>
+                        <p>
+                            <span class="text-accent">const</span> portfolio = {
+                        </p>
                         <p class="pl-4">
-                            developer: <span class="text-heading">'Gideon'</span>,
+                            developer:
+                            <span class="text-heading">'Gideon'</span>,
                         </p>
                         <p class="pl-4">builtWith: [</p>
                         <p class="pl-8 text-heading">'Laravel',</p>
@@ -97,12 +138,15 @@ const year = new Date().getFullYear();
                         <p class="pl-8 text-heading">'TypeScript'</p>
                         <p class="pl-4">],</p>
                         <p class="pl-4">
-                            status: <span class="text-accent">'in progress'</span>
+                            status:
+                            <span class="text-accent">'in progress'</span>
                         </p>
                         <p>};</p>
                     </div>
 
-                    <div class="flex items-center justify-between gap-4 border-t border-outline/60 px-5 py-4 font-mono text-[10px] text-muted sm:px-7">
+                    <div
+                        class="flex items-center justify-between gap-4 border-t border-outline/60 px-5 py-4 font-mono text-[10px] text-muted sm:px-7"
+                    >
                         <span class="flex items-center gap-2">
                             <span class="size-1.5 rounded-full bg-accent/70" />
                             Building something personal
@@ -111,7 +155,9 @@ const year = new Date().getFullYear();
                     </div>
                 </div>
 
-                <div class="mt-5 flex items-center justify-end gap-3 font-mono text-[10px] tracking-widest text-muted">
+                <div
+                    class="mt-5 flex items-center justify-end gap-3 font-mono text-[10px] tracking-widest text-muted"
+                >
                     <span>CODE</span>
                     <span class="text-outline">/</span>
                     <span>LEARN</span>
@@ -122,7 +168,9 @@ const year = new Date().getFullYear();
         </main>
 
         <footer class="mx-auto w-full max-w-7xl px-6 lg:px-8">
-            <div class="flex flex-wrap items-center justify-between gap-3 border-t border-outline/50 py-6 text-xs leading-relaxed text-muted">
+            <div
+                class="flex flex-wrap items-center justify-between gap-3 border-t border-outline/50 py-6 text-xs leading-relaxed text-muted"
+            >
                 <p>© {{ year }} {{ name }}</p>
                 <p>Built with Laravel, TypeScript & Vue.</p>
             </div>
